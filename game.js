@@ -5,8 +5,6 @@ const ctx = canvas.getContext("2d");
 
 let movePlattform = 0;
 const PLATTFORM_SPEED = 20;
-const PLATTFORM_SPEED_RIGHT = PLATTFORM_SPEED;
-const PLATTFORM_SPEED_LEFT = PLATTFORM_SPEED * -1;
 const plattform = {
   x: 180,
   y: 580,
@@ -137,8 +135,8 @@ function buildBlocks() {
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "ArrowRight") {
-    movePlattform = PLATTFORM_SPEED_RIGHT;
+    movePlattform = PLATTFORM_SPEED;
   } else if (event.key === "ArrowLeft") {
-    movePlattform = PLATTFORM_SPEED_LEFT;
+    movePlattform = PLATTFORM_SPEED * -1;
   }
 });
